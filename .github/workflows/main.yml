@@ -23,6 +23,6 @@ jobs:
           role-session-name: samplerolesession
           aws-region: ${{ env.AWS_REGION }}
       # Upload a file to AWS s3
-      - name: Copy index.html to s3
+      - name: Copy test-vault.yml to s3
         run: |
-          aws s3 cp ./test-vault.yml s3://${{ env.BUCKET_NAME }}/
+          aws s3 cp /home/cloudshell-user/test-vault.yml s3://${{ env.BUCKET_NAME }}/
