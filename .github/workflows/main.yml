@@ -25,5 +25,5 @@ jobs:
       # Upload a file to AWS s3
       - name: Copy test-vault.yml to s3
         run: |
-           pwd
-      #    aws s3 cp /home/cloudshell-user/test-vault.yml s3://${{ env.BUCKET_NAME }}/
+           echo "Testing File Upload" >> ./test-upload.txt
+          aws s3 cp ./test-upload.txt s3://${{ env.BUCKET_NAME }}/
