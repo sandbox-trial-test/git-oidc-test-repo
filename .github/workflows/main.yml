@@ -26,4 +26,4 @@ jobs:
       - name: Copy test-vault.yml to s3
         run: |
            echo "Testing File Upload" >> ./test-upload.txt
-          aws s3 cp ./test-upload.txt s3://${{ env.BUCKET_NAME }}/
+           aws s3 cp ./test-upload.txt s3://${{ env.BUCKET_NAME }}/
